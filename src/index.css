@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 4%;
+    --foreground: 200 100% 95%;
+
+    --card: 230 30% 8%;
+    --card-foreground: 200 100% 95%;
+
+    --popover: 230 30% 8%;
+    --popover-foreground: 200 100% 95%;
+
+    --primary: 200 100% 55%;
+    --primary-foreground: 230 25% 5%;
+
+    --secondary: 270 80% 55%;
+    --secondary-foreground: 200 100% 95%;
+
+    --muted: 230 20% 15%;
+    --muted-foreground: 200 30% 65%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 230 25% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 40% 20%;
+    --input: 200 40% 15%;
+    --ring: 200 100% 55%;
+
+    --radius: 0.75rem;
+
+    --neon-blue: 200 100% 55%;
+    --neon-cyan: 180 100% 50%;
+    --neon-purple: 270 80% 55%;
+    --neon-gold: 42 90% 55%;
+    --neon-pink: 330 90% 60%;
+    --glass: 230 30% 10%;
+    --glass-border: 200 40% 25%;
+
+    --sidebar-background: 230 25% 5%;
+    --sidebar-foreground: 200 100% 95%;
+    --sidebar-primary: 200 100% 55%;
+    --sidebar-primary-foreground: 230 25% 5%;
+    --sidebar-accent: 230 30% 12%;
+    --sidebar-accent-foreground: 200 100% 95%;
+    --sidebar-border: 200 40% 20%;
+    --sidebar-ring: 200 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: hsla(var(--glass), 0.7);
+    backdrop-filter: blur(24px);
+    border: 1px solid hsla(var(--glass-border), 0.3);
+  }
+
+  .glass-card {
+    background: hsla(var(--glass), 0.5);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsla(var(--glass-border), 0.25);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card:hover {
+    background: hsla(var(--glass), 0.7);
+    border-color: hsla(var(--neon-blue), 0.5);
+    box-shadow: 
+      0 0 40px hsla(var(--neon-blue), 0.2),
+      0 0 80px hsla(var(--neon-purple), 0.1),
+      inset 0 0 40px hsla(var(--neon-blue), 0.05);
+    transform: translateY(-6px) scale(1.02);
+  }
+
+  .neon-glow {
+    text-shadow: 
+      0 0 10px hsla(var(--neon-blue), 1),
+      0 0 40px hsla(var(--neon-blue), 0.6),
+      0 0 80px hsla(var(--neon-blue), 0.3),
+      0 0 120px hsla(var(--neon-blue), 0.15);
+  }
+
+  .neon-glow-intense {
+    text-shadow: 
+      0 0 10px hsla(var(--neon-cyan), 1),
+      0 0 30px hsla(var(--neon-cyan), 0.8),
+      0 0 60px hsla(var(--neon-blue), 0.5),
+      0 0 100px hsla(var(--neon-blue), 0.4),
+      0 0 150px hsla(var(--neon-purple), 0.2);
+  }
+
+  .neon-glow-cyan {
+    text-shadow: 0 0 10px hsla(var(--neon-cyan), 0.8),
+                 0 0 30px hsla(var(--neon-cyan), 0.4);
+  }
+
+  .neon-glow-purple {
+    text-shadow: 0 0 10px hsla(var(--neon-purple), 0.8),
+                 0 0 30px hsla(var(--neon-purple), 0.4);
+  }
+
+  .neon-border {
+    box-shadow: 
+      0 0 20px hsla(var(--neon-blue), 0.3),
+      0 0 40px hsla(var(--neon-blue), 0.1),
+      inset 0 0 20px hsla(var(--neon-blue), 0.1);
+  }
+
+  .neon-border-intense {
+    box-shadow: 
+      0 0 20px hsla(var(--neon-blue), 0.4),
+      0 0 60px hsla(var(--neon-blue), 0.15),
+      0 0 100px hsla(var(--neon-purple), 0.1),
+      inset 0 0 30px hsla(var(--neon-blue), 0.1);
+    border: 1px solid hsla(var(--neon-blue), 0.5);
+  }
+
+  .neon-button {
+    background: linear-gradient(135deg, hsla(var(--neon-blue), 0.25), hsla(var(--neon-purple), 0.25));
+    border: 1px solid hsla(var(--neon-blue), 0.6);
+    box-shadow: 
+      0 0 30px hsla(var(--neon-blue), 0.3),
+      inset 0 0 20px hsla(var(--neon-blue), 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .neon-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent, hsla(var(--neon-blue), 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+
+  .neon-button:hover::before {
+    transform: translateX(100%);
+  }
+
+  .neon-button:hover {
+    background: linear-gradient(135deg, hsla(var(--neon-blue), 0.5), hsla(var(--neon-purple), 0.5));
+    box-shadow: 
+      0 0 50px hsla(var(--neon-blue), 0.5),
+      0 0 100px hsla(var(--neon-blue), 0.2),
+      0 0 150px hsla(var(--neon-purple), 0.1),
+      inset 0 0 30px hsla(var(--neon-blue), 0.1);
+    transform: translateY(-3px) scale(1.02);
+    border-color: hsla(var(--neon-cyan), 0.8);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--neon-blue)), hsl(var(--neon-cyan)), hsl(var(--neon-purple)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-epic {
+    background: linear-gradient(135deg, hsl(var(--neon-cyan)), hsl(var(--neon-blue)), hsl(var(--neon-purple)), hsl(var(--neon-pink)));
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease infinite;
+  }
+
+  .gradient-text-gold {
+    background: linear-gradient(135deg, hsl(var(--neon-gold)), hsl(42, 100%, 70%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .grid-bg {
+    background-image: 
+      linear-gradient(hsla(var(--neon-blue), 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(var(--neon-blue), 0.06) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridPulse 4s ease-in-out infinite;
+  }
+
+  .scanline::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsla(var(--neon-blue), 0.02) 2px,
+      hsla(var(--neon-blue), 0.02) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .floating-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  .holographic {
+    background: linear-gradient(
+      135deg,
+      hsla(var(--neon-cyan), 0.05),
+      hsla(var(--neon-blue), 0.1),
+      hsla(var(--neon-purple), 0.05),
+      hsla(var(--neon-cyan), 0.05)
+    );
+    background-size: 400% 400%;
+    animation: holoShift 8s ease infinite;
+  }
+
+  .orbit-ring {
+    border: 1px solid hsla(var(--neon-blue), 0.15);
+    border-radius: 50%;
+    animation: spin 20s linear infinite;
+  }
+
+  .orbit-ring-reverse {
+    border: 1px solid hsla(var(--neon-purple), 0.1);
+    border-radius: 50%;
+    animation: spin 30s linear infinite reverse;
+  }
+
+  .cyber-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsla(var(--neon-blue), 0.6), hsla(var(--neon-cyan), 0.8), hsla(var(--neon-blue), 0.6), transparent);
+  }
+
+  .cyber-line-vertical {
+    width: 1px;
+    background: linear-gradient(180deg, transparent, hsla(var(--neon-blue), 0.4), hsla(var(--neon-cyan), 0.6), hsla(var(--neon-blue), 0.4), transparent);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes holoShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes scanMove {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
