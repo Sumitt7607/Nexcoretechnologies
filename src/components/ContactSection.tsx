@@ -13,7 +13,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-36 relative">
+    <section id="contact" className="py-10 relative">
       <div className="container mx-auto px-6">
         <SectionHeading tag="◈ CONTACT" title="Get In Touch" subtitle="Initiate your digital transformation journey." />
         <motion.form
@@ -22,7 +22,7 @@ const ContactSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           onSubmit={handleSubmit}
-          className="glass-card rounded-3xl p-10 sm:p-14 max-w-2xl mx-auto neon-border-intense space-y-8 relative overflow-hidden"
+          className="glass-card rounded-3xl p-5 sm:p-14 max-w-2xl mx-auto neon-border-intense space-y-8 relative overflow-hidden"
         >
           <div className="absolute inset-0 grid-bg opacity-10" />
           <div className="relative z-10 space-y-8">

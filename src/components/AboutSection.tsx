@@ -9,7 +9,7 @@ const features = [
 ];
 
 const AboutSection = () => (
-  <section id="about" className="py-36 relative overflow-hidden">
+  <section id="about" className="py-20 relative overflow-hidden">
     <div className="absolute inset-0 holographic opacity-30" />
     <div className="container mx-auto px-6 relative z-10">
       <SectionHeading

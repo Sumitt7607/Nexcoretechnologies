@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "./SectionHeading";
 
 const AIFutureSection = () => (
-  <section className="py-36 relative overflow-hidden">
+  <section className="py-10 relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-secondary/5 to-transparent" />
     <div className="absolute inset-0 holographic opacity-20" />
     <div className="container mx-auto px-6 relative z-10">
@@ -12,7 +12,7 @@ const AIFutureSection = () => (
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="glass-card rounded-3xl p-12 sm:p-16 max-w-4xl mx-auto text-center neon-border-intense relative overflow-hidden"
+        className="glass-card rounded-3xl p-5 sm:p-1 max-w-4xl mx-auto text-center neon-border-intense relative overflow-hidden"
       >
         <div className="absolute inset-0 grid-bg opacity-20" />
         <div className="relative z-10">

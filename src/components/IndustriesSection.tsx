@@ -14,7 +14,7 @@ const industries = [
 ];
 
 const IndustriesSection = () => (
-  <section className="py-36 relative">
+  <section className="py-10 relative">
     <div className="container mx-auto px-6">
       <SectionHeading tag="◈ INDUSTRIES" title="Industries We Serve" subtitle="Transforming every sector with intelligent technology." />
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">

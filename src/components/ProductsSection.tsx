@@ -12,7 +12,7 @@ const products = [
 ];
 
 const ProductsSection = () => (
-  <section id="products" className="py-36 relative">
+  <section id="products" className="py-5 relative">
     <div className="container mx-auto px-6">
       <SectionHeading tag="◈ PRODUCTS" title="Digital Products" subtitle="Advanced technology products built for the enterprises of tomorrow." />
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">

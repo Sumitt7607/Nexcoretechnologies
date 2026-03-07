@@ -8,7 +8,7 @@ const plans = [
 ];
 
 const PricingSection = () => (
-  <section id="pricing" className="py-36 relative overflow-hidden">
+  <section id="pricing" className="py-10 relative overflow-hidden">
     <div className="absolute inset-0 holographic opacity-15" />
     <div className="container mx-auto px-6 relative z-10">
       <SectionHeading tag="◈ PRICING" title="Investment Plans" subtitle="Website Development starting at ₹3,500 — Future-proof technology at revolutionary prices." />

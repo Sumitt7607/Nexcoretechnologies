@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
   const prev = () => setActive((a) => (a - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section className="py-36 relative">
+    <section className="py-5 relative">
       <div className="container mx-auto px-6">
         <SectionHeading tag="◈ TESTIMONIALS" title="Client Voices" />
         <div className="max-w-3xl mx-auto">

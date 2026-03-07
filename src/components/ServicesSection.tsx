@@ -14,7 +14,7 @@ const services = [
 ];
 
 const ServicesSection = () => (
-  <section id="services" className="py-36 relative">
+  <section id="services" className="py-10 relative">
     <div className="absolute top-0 left-0 right-0 cyber-line" />
     <div className="container mx-auto px-6">
       <SectionHeading

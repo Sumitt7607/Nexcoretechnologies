@@ -12,7 +12,7 @@ const steps = [
 ];
 
 const ProcessSection = () => (
-  <section id="process" className="py-36 relative overflow-hidden">
+  <section id="process" className="py-5 relative overflow-hidden">
     <div className="absolute inset-0 holographic opacity-15" />
     <div className="container mx-auto px-6 relative z-10">
       <SectionHeading tag="◈ PROCESS" title="Development Process" subtitle="A precision-engineered journey from concept to reality." />
