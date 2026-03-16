@@ -10,7 +10,7 @@ const submitReview = async(e)=>{
 
 e.preventDefault()
 
-await fetch("http://localhost:5000/api/review",{
+await fetch("https://nexcorebackend.vercel.app/api/review",{
 method:"POST",
 headers:{
 "Content-Type":"application/json"

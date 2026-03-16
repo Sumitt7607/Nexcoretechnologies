@@ -10,7 +10,7 @@ const [active,setActive] = useState(0)
 
 useEffect(()=>{
 
-fetch("http://localhost:5000/api/reviews")
+fetch("https://nexcorebackend.vercel.app/api/reviews")
 .then(res=>res.json())
 .then(data=>{
 console.log("REVIEWS:",data)
