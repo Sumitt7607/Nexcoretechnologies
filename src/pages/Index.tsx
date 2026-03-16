@@ -20,11 +20,13 @@ import WhatsAppFloat from "@/components/floatingWhatsapp";
 
 import FooterSection from "@/components/FooterSection";
 
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
       <Navbar />
       <HeroSection />
+    {/* <ReviewForm/>    */}
       <AboutSection />
       <ServicesSection />
       <ProblemSolution />
@@ -36,6 +38,7 @@ const Index = () => {
       <ProcessSection />
       <AutomationSection />
       <AIFutureSection />
+
       <PricingSection />
       <TestimonialsSection />
       <StatsSection />
